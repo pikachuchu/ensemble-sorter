@@ -1,0 +1,19 @@
+{
+  "name": "ensemble-sorter",
+  "version": "0.0.0",
+  "description": "Ensemble sorter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo no test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pikachuchu/ensemble-sorter.git"
+  },
+  "author": "Chuchu Ma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pikachuchu/ensemble-sorter/issues"
+  },
+  "homepage": "https://github.com/pikachuchu/ensemble-sorter"
+}
