@@ -1,7 +1,7 @@
 box: nodesource/trusty
 build:
     steps:
-        - npm-install
+        - nahody/npm-install
             environment: development
         - npm-test
         - script:
