@@ -2,4 +2,8 @@ box: nodesource/trusty
 build:
     steps:
         - npm-install
+            environment: development
         - npm-test
+        - script:
+            name: remove devDependencies
+            code: npm prune --production

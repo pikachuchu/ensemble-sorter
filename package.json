@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app",
-    "test": "istanbul cover _mocha -- ./test --recursive"
+    "test": "node_modules/.bin/istanbul cover _mocha -- ./test --recursive"
   },
   "repository": {
     "type": "git",
