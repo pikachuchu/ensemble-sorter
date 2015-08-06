@@ -4,7 +4,8 @@
   "description": "Ensemble sorter",
   "main": "index.js",
   "scripts": {
-    "test": "echo no test"
+    "start": "node app",
+    "test": "istanbul cover _mocha -- ./test --recursive"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,18 @@
   "bugs": {
     "url": "https://github.com/pikachuchu/ensemble-sorter/issues"
   },
-  "homepage": "https://github.com/pikachuchu/ensemble-sorter"
+  "homepage": "https://github.com/pikachuchu/ensemble-sorter",
+  "dependencies": {
+    "express": "^4.13.3",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "expect": "^1.8.0",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5",
+    "mockery": "^1.4.0",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0"
+  }
 }
