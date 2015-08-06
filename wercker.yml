@@ -1,9 +1,10 @@
 box: nodesource/trusty
 build:
     steps:
-        - nahody/npm-install
+        - nahody/npm-install@1.1.1
             environment: development
         - npm-test
         - script:
             name: remove devDependencies
-            code: npm prune --production
+            code: |
+                npm prune --production
