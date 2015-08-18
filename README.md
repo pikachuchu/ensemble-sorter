@@ -4,6 +4,7 @@
 EChO Ensemble Sorter
 
 ## Routes to Implement
+- GET /user/{user}
 - GET /user/{user}/data/{field}
 - PUT /user/{user}/rating/{rating}
 - PUT /user/{user}/dues/{dues}
