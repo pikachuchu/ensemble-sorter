@@ -19,6 +19,7 @@
   "homepage": "https://github.com/pikachuchu/ensemble-sorter",
   "dependencies": {
     "express": "^4.13.3",
+    "orchestrate": "^0.4.7",
     "q": "^1.4.1"
   },
   "devDependencies": {
