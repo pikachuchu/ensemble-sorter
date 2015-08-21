@@ -39,3 +39,23 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+deploy:
+  steps:
+    - add-to-known_hosts:
+        hostname: $HOSTNAME
+    - mktemp:
+        envvar: PRIVATEKEY_PATH
+    - create-file:
+        name: write key
+        filename: $PRIVATEKEY_PATH
+        content: $WERCKER_PRIVATE
+        overwrite: true
+    - script:
+        name: stop application
+        code: ssh -i $PRIVATE_KEY_PATH -l root $HOSTNAME "rm -rf ensemble-sorter && killall nodejs"
+    - script:
+        name: clone and install
+        code: ssh -i $PRIVATE_KEY_PATH -l root $HOSTNAME "git clone https://github.com/pikachuchu/ensemble-sorter.git && cd ensemble-sorter && npm install --production"
+    - script:
+        name: start application
+        code: ssh -i $PRIVATE_KEY_PATH -l root $HOSTNAME "nohup nodejs ensemble-sorter/app > foo.out 2> foo.err < /dev/null &"
