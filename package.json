@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node app",
-    "test": "node_modules/.bin/istanbul cover _mocha -- ./test --recursive"
+    "test": "node_modules/.bin/istanbul cover _mocha -- ./test --recursive",
+    "functional": "node_modules/.bin/cucumber.js --tags=~@wip"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,12 @@
   "dependencies": {
     "express": "^4.13.3",
     "orchestrate": "^0.4.7",
-    "q": "^1.4.1"
+    "q": "^1.4.1",
+    "q-io": "^1.13.1"
   },
   "devDependencies": {
     "chai": "^3.2.0",
+    "cucumber": "^0.5.2",
     "expect": "^1.8.0",
     "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
