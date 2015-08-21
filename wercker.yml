@@ -53,7 +53,7 @@ deploy:
         hide-from-log: true
     - script:
         name: stop application
-        code: ssh -i $PRIVATE_KEY_PATH -l root $HOSTNAME "rm -rf ensemble-sorter && killall nodejs"
+        code: ssh -i $PRIVATE_KEY_PATH -l root $HOSTNAME "rm -rf ensemble-sorter; killall nodejs"
     - script:
         name: clone and install
         code: ssh -i $PRIVATE_KEY_PATH -l root $HOSTNAME "git clone https://github.com/pikachuchu/ensemble-sorter.git && cd ensemble-sorter && npm install --production"
