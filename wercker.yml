@@ -44,12 +44,13 @@ deploy:
     - add-to-known_hosts:
         hostname: $HOSTNAME
     - mktemp:
-        envvar: PRIVATEKEY_PATH
+        envvar: PRIVATE_KEY_PATH
     - create-file:
         name: write key
-        filename: $PRIVATEKEY_PATH
+        filename: $PRIVATE_KEY_PATH
         content: $WERCKER_PRIVATE
         overwrite: true
+        hide-from-log: true
     - script:
         name: stop application
         code: ssh -i $PRIVATE_KEY_PATH -l root $HOSTNAME "rm -rf ensemble-sorter && killall nodejs"
