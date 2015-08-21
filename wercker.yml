@@ -56,6 +56,6 @@ deploy:
     - script:
         name: clone and install
         code: ssh -i $PRIVATE_KEY_PATH -l root $HOSTNAME "git clone https://github.com/pikachuchu/ensemble-sorter.git && cd ensemble-sorter && npm install --production"
-    - script
+    - script:
         name: start application
         code: ssh -i $PRIVATE_KEY_PATH -l root $HOSTNAME "nohup nodejs ensemble-sorter/app > foo.out 2> foo.err < /dev/null &"
